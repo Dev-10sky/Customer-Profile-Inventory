@@ -5,9 +5,9 @@ import java.io.FileNotFoundException;
 
 public class CustomerProf {
     // remember to add vehicle info
-    String adminID,firstName,lastName,address,phone,status,use;
-    float income;
-    VehicleInfo vehicleInfo;
+    private String adminID,firstName,lastName,address,phone,status,use;
+    private float income;
+    private VehicleInfo vehicleInfo;
 
     public CustomerProf(String adminId,String FName,String LName,String Address,String phoneNum,float incomeAmt,String customerStatus,String vehicleUse, VehicleInfo vh){
         adminID = adminId;                     // sets the admin id variable
@@ -45,23 +45,27 @@ public class CustomerProf {
     public String getUse(){              // this returns the usage of the customer's vehicle associated with the profile
         return use;
     }                 // gets the usage of vehicle from profile
-    //getVehicleInfo():VehicleInfo
+    public VehicleInfo getVehicleInfo(){return vehicleInfo;}
     public void updateFirstName(String name){         // this updates the current first name of the profile
         this.firstName = name;
     }
-    public void updateLastName(String name ){ this.lastName = name; } // this updates the current last name of the profile
+    public void updateLastName(String name ){         // this updates the current last name of the profile
+        this.lastName = name;
+    }
     public void updateAddress(String currAddress){      // this updates the current address of the profile
         this.address = currAddress;
-    } // this updates the current address
+    }
     public void updatePhone(String phoneNumber){        // this updates the phone number of the customer profile
         this.phone = phoneNumber;
-    } // this updates the phone number
+    }
     public void updateIncome(float profIncome){         // this updates the income of the profile of the customer
         this.income = profIncome;
-    }// this updates the profile's income
+    }
     public void updateStatus(String currStatus){        // this updates the customer's profile status
         this.status = currStatus;
-    } // this updates the status of customer
-    //updateVehicleInfo(VehicleInfo)
+    }
+    public void updateVehicleInfo(VehicleInfo vhInfo){
+        vehicleInfo = vhInfo;
+    }
 
 }
