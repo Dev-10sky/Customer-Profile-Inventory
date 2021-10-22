@@ -1,4 +1,7 @@
-public class VehicleInfo {
+import java.io.Serializable;
+
+// Serializable is added so that it could be tested using the TestClass.java
+public class VehicleInfo implements Serializable {
     
     private String model;               // the model of the vehicle
     private String year;                // the year the vehicle was manufactured
