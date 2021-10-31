@@ -2,10 +2,9 @@
 import java.io.File;           //imports java file methods for Log file
 import java.util.Date;         // imports the java date for recording time of testing.
 import java.io.FileNotFoundException;
-import java.io.Serializable;
 
 // Serializable is added so that it could be tested using the TestClass.java
-public class CustomerProf implements Serializable{
+public class CustomerProf{
     // remember to add vehicle info
     private String adminID,firstName,lastName,address,phone,status,use;
     private float income;
