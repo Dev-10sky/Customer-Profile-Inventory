@@ -8,11 +8,11 @@ public class VehicleInfo {
                                         // select from new, certified pre-owned, used, other
 
     // constructs VehicleInfo object by setting variables to parameters
-    public VehicleInfo(String m, String y, String t, String mt){
-        model = m;
-        year = y;
-        type = t;
-        method = mt;
+    public VehicleInfo(String model, String year, String type, String method){
+        this.model = model;
+        this.year = year;
+        this.type = type;
+        this.method = method;
     }
 
     // updates car model
