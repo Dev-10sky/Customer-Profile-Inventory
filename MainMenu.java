@@ -48,7 +48,6 @@ public class MainMenu extends JFrame {
 
         select.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                frame.setVisible(false);
                 if(opt1.isSelected()) new CreateProfile(database);
             }
         });

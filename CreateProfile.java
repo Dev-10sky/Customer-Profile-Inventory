@@ -97,7 +97,7 @@ public class CreateProfile extends JFrame {
                     float i = Float.parseFloat(inc.getText());
                     CustomerProf cp = new CustomerProf(aID.getText(), fName.getText(), lName.getText(), addr.getText(), pn.getText(), i, (String)statusMenu.getSelectedItem(), (String)useMenu.getSelectedItem(), vi);
                     database.insertNewProfile(cp);
-                    new MainMenu();
+                    f.setVisible(false);
                 }
                 catch (Exception e){
                     JOptionPane.showMessageDialog(null, "Please do not enter any non-numerical characters in the income field.");
