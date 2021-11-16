@@ -91,11 +91,17 @@ public class CreateProfile extends JFrame {
         submit.setBounds(100, 375, 100, 50);
 
         submit.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent ae){
                 VehicleInfo vi = new VehicleInfo(m.getText(), yr.getText(), (String)typeMenu.getSelectedItem(), (String)methodMenu.getSelectedItem());
-                CustomerProf cp = new CustomerProf(aID.getText(), fName.getText(), lName.getText(), addr.getText(), pn.getText(), Float.parseFloat(inc.getText()), (String)statusMenu.getSelectedItem(), (String)useMenu.getSelectedItem(), vi);
-                database.insertNewProfile(cp);
-                new MainMenu();
+                try{
+                    float i = Float.parseFloat(inc.getText());
+                    CustomerProf cp = new CustomerProf(aID.getText(), fName.getText(), lName.getText(), addr.getText(), pn.getText(), i, (String)statusMenu.getSelectedItem(), (String)useMenu.getSelectedItem(), vi);
+                    database.insertNewProfile(cp);
+                    new MainMenu();
+                }
+                catch (Exception e){
+                    JOptionPane.showMessageDialog(null, "Please do not enter any non-numerical characters in the income field.");
+                }
             }
         });
 
