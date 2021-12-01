@@ -49,6 +49,7 @@ public class MainMenu extends JFrame {
         select.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if(opt1.isSelected()) new CreateProfile(database);
+                else if(opt2.isSelected()) new DeleteProfile(database);
             }
         });
 
@@ -60,7 +61,7 @@ public class MainMenu extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
-
+    
     public static void main(String[] args){
         new MainMenu();
     }

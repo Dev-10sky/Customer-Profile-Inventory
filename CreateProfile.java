@@ -135,7 +135,7 @@ public class CreateProfile extends JFrame {
         f.setSize(300, 500);
         f.setLayout(null);  
         f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
     }
     
